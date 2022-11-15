@@ -1,15 +1,32 @@
+[toc]
+
 ## introduce
 
-1. http: Hypertext Transfer Protocol
-
-   - Hypertext: 能够进行分支判断(response's alert)和差异响应的文本(比如文字可以点击, 可以触发脚本执行, 可以调用服务端)
-   - 超媒体: 能够进行分支判断和差异响应的文本, 图形, 电影和声音的复合体
-   - 超文本/超媒体意味着**信息和控制的同时呈现**, 使得信息成为用户/自动机通过其获得**选择和选择动作**的可供性
-
-2. spec
+1. spec
 
    - [rfc-2022](https://www.ietf.org/rfc/rfc9110.txt)
    - [rfc-http1](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.2)
+
+2. http: 无状态
+
+   - url: `restful-api`
+   - headers
+   - method: 8 种
+   - status code
+     1. 1xx: 提示信息{请求已收到继续处理}
+     2. 2xx: 成功
+     3. 3xx: 重定向
+     4. 4xx: 客户端错误
+     5. 5xx: 服务端错误
+
+3. https: http +ssl(tls)
+
+4. version
+
+   - http/1.0
+   - http/1.1
+   - http/2.0
+   - http/3.0: tcp 废弃
 
 ## comparison with grpc
 

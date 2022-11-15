@@ -16,11 +16,11 @@
 
 3. api flow
 
-   ![avatar](/static/image/common/api/api-flow.png)
+   ![avatar](/static/image/api/api-flow.png)
 
 4. api style
 
-   ![avatar](/static/image/common/api/api-style.png)
+   ![avatar](/static/image/api/api-style.png)
 
 ## 前后端分离
 

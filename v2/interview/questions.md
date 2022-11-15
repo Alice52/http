@@ -1,8 +1,8 @@
 [toc]
 
-### 1. 跨域
+## 1. 跨域
 
-![avatar](/static/image/common/http/http-cors.png)
+![avatar](/static/image/http/http-cors.png)
 
 1. 指的是浏览器不能执行其他网站的脚本
 
@@ -23,7 +23,7 @@
 
 3. [非简单请求(PUT, DELETE) 需要先发预检请求](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
-   ![avatar](/static/image/common/http/cross-domain.png)
+   ![avatar](/static/image/security/cross-domain.png)
 
 4. 简单请求
 
@@ -58,7 +58,7 @@
         - 请注意, 浏览器自身维护了一个最大有效时间, 如果该首部字段的值超过了最大有效时间, 将不会生效
      ```
 
-### 2. 沾包问题
+## 2. 沾包问题
 
 1. 粘包这个问题的根因是由于开发⼈员没有正确理解 TCP **⾯向字节流的数据传输⽅式**, 本身并不是 TCP 的问题, 是开发者的问题
 2. TCP 会沾包: ` tcp 组装分割数据包 + 无边界标识`
@@ -71,6 +71,12 @@
 4. IP: `只会拆包, 但不会将不同的分包组装成一个发送` + `拆分后的数据包具有相同header和各自的offset`
    - IP 层也切⽚, 但是因为不关⼼消息⾥有啥, 因此有不会有粘包问题
 
-### 3. http vs rpc(grpc)
+## 3. http vs rpc(grpc)
 
 1. [TDB](https://mp.weixin.qq.com/s/d3DNfcyBjb8ayKq5AcvePQ)
+
+---
+
+## reference
+
+1. [常见问题列表](https://github.com/Alice52/common-http/issues/8)

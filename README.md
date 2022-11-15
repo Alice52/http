@@ -1,60 +1,58 @@
-# common-http
+[toc]
 
-1. this is common repo about http.
+![avatar](/static/image/common/http-overview.png)
 
-## outline
+## layout
 
-1. 七层⽹络
+1. [introduce](/v2/layers/readme.md)
 
-   - 每一层的协议: lvs
+   - osi
+   - [concept](/v2/layers/readme.md)
 
-2. 相关概念
+2. layers: 7(4)
 
-   - tcp/udp{视频推流}
-   - ip
-   - dns
-   - cdn
-   - http
-   - https
-   - ssl / tls
-   - 对称加密{aes/des/des3} & 非对称加密{rsa}
-   - 摘要算法: sha256/md5
+   - application layer: http/ftp/ssh/dns/[pop3/smtp/imap]
+   - _representation layer_: telnet/snmp
+   - _session layer_: smtp
+   - transport layer: tcp/udp
+   - network layer: ip/icmp
+   - data-link layer: **arp**/fddi/ethernet
+   - _physical layer_: ieee 802.1a
 
-3. http: 无状态
+3. **http**: application layer
 
-   - url: `restful-api`
-   - headers
-   - method: 8 种
-   - status code
+   - http: status + connection + method + header + cache
+   - https: http + ssl
+   - http1 | 2 | 3(quic)
 
-     1. 1xx: 提示信息{请求已收到继续处理}
-     2. 2xx: 成功
-     3. 3xx: 重定向
-     4. 4xx: 客户端错误
-     5. 5xx: 服务端错误
+4. security
 
-4. https: http +ssl(tls)
-
-5. version
-
-   - http/1.0
-   - http/1.1
-   - http/2.0
-   - http/3.0: tcp 废弃
-
-6. 安全
-
-   - dos
+   - 中间人攻击
+   - ddos 攻击
    - csrf
+   - cros
+   - 防盗链
 
-7. 应用
+5. tools
 
-   - 跨域: cros
-   - restful api
+   - wireshark | ssh | proxy | fiddler
+   - postman/swagger/apifox
+   - altair graphql client | graphiql
 
-8. [常见问题列表](https://github.com/Alice52/common-http/issues/8)
+6. performance & apply
 
-## network
+   - netty
+   - socket programming
+   - nginx tcp optimize
+
+7. interview & production case
+
+   - network io: epoll
+   - performance optimize: network
+   - rpc | http
+   - graphql | rest | soap
+
+## network evolution
 
 1. 两台电脑可以通过⼀根⽹线直接连接进⾏通信
 2. 机器变多, 可以把⽹线都接到集线器{物理层}上: 无脑⼴播
